@@ -1,0 +1,35 @@
+{
+  "name": "tsc-playground",
+  "version": "1.0.0",
+  "description": "Trying new ideas for getting my tsc code to next level",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexiss/tsc-playground.git"
+  },
+  "keywords": [
+    "tsc",
+    "typescript",
+    "playground"
+  ],
+  "author": "Pablo de la Fuente Hernanz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nexiss/tsc-playground/issues"
+  },
+  "homepage": "https://github.com/nexiss/tsc-playground#readme",
+  "dependencies": {
+    "@babel/core": "^7.23.7",
+    "@babel/eslint-parser": "^7.23.3",
+    "@types/node": "^20.11.3",
+    "@typescript-eslint/eslint-plugin": "^6.19.0",
+    "@typescript-eslint/parser": "^6.19.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint": "^8.56.0",
+    "prettier": "^3.2.2",
+    "typescript": "^5.3.3"
+  }
+}
