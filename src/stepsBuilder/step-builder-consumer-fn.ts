@@ -1,4 +1,4 @@
-import { getMachineBuilder } from './builder';
+import { getMachineBuilder, getSpecificMachineBuilder } from './builder-fn';
 
 const mobile = getMachineBuilder()
   .setSharedAttribute('')
@@ -32,3 +32,21 @@ const imposibleMachine2 = getMachineBuilder()
   .setCamera('camera2')
   .setSharedAttribute('')
   .build();
+
+getSpecificMachineBuilder({ type: 'mobile' })
+  .setSharedAttribute('anything')
+  .build();
+getSpecificMachineBuilder({ type: 'mobile', camera: 'camera1' }).build();
+getSpecificMachineBuilder({ type: 'mobile', camera: 'camera1' })
+  .setCamera('camera2')
+  .build();
+getSpecificMachineBuilder({ type: 'computer' })
+  .setSharedAttribute('anything')
+  .build();
+getSpecificMachineBuilder({ type: 'computer', peripherals: [] }).build();
+getSpecificMachineBuilder({ type: 'computer', peripherals: [] })
+  .setPeripherals(['peripheral1'])
+  .build();
+
+// This should be complaining, as camera is not a part of the computer, but one of the mobile
+getSpecificMachineBuilder({ type: 'computer', camera: '' });
